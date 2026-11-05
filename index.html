@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Content Plan</title>
+<script>try{var t=localStorage.getItem("rj-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F1E8;--fg:#15181E;--card:#fff;--line:rgba(21,24,30,.14);--acc:#2E6B4E;--on:#fff;--hov:#DCEBDD;--lnk:#2E6B4E;--tint:rgba(21,24,30,.06);--e:cubic-bezier(.2,.8,.2,1);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15181E;--fg:#F5F1E8;--card:#1D2129;--line:rgba(245,241,232,.16);--hov:#1F4D37;--lnk:#DCEBDD;--tint:rgba(245,241,232,.07);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#15181E;--fg:#F5F1E8;--card:#1D2129;--line:rgba(245,241,232,.16);--hov:#1F4D37;--lnk:#DCEBDD;--tint:rgba(245,241,232,.07);color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 15px/1.6 Montserrat,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
+button,input,textarea,select{font:inherit;color:inherit}button{cursor:pointer}
+::placeholder{color:var(--fg);opacity:.45}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(18px,4vw,40px) 90px}
+.tb{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:22px 0}.tr{display:flex;align-items:center;gap:10px}
+.lg{display:flex;align-items:center;gap:10px;background:none;border:0;padding:0;font-weight:900;font-size:17px;letter-spacing:.04em}
+.lg i{width:12px;height:12px;border-radius:50%;background:var(--acc)}
+.btn,.gb{display:flex;align-items:center;gap:8px;border:1.5px solid var(--line);background:none;border-radius:999px;padding:9px 18px;font-weight:700;font-size:14px;transition:background .25s,transform .15s}
+.btn:hover{background:var(--hov)}.btn:active,.gb:active{transform:scale(.96)}
+.gb,.btn.fill,.btn.fill:hover{background:var(--acc);border-color:var(--acc);color:var(--on)}
+.gb:disabled{cursor:wait}.gb svg{width:16px;height:16px}.gen.sp svg{animation:sp 1s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.tg2{display:grid;place-items:center;width:40px;height:40px;padding:0;border:1.5px solid var(--line);border-radius:50%;background:none;transition:background .25s}
+.tg2:hover{background:var(--hov)}.tg2 svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.tg2 .su,:root[data-theme="dark"] .tg2 .mo{display:none}:root[data-theme="dark"] .tg2 .su{display:block}
+#view.out{opacity:0;transform:translateY(8px)}#view{transition:opacity .22s,transform .22s}#view.in{animation:fin .45s var(--e)}
+@keyframes fin{from{opacity:0;transform:translateY(12px)}}
+@keyframes pop{from{opacity:0;transform:scale(.96)}}
+.h1{margin:clamp(20px,4vw,44px) 0 12px;font-weight:900;font-size:clamp(36px,7vw,84px);line-height:1;letter-spacing:-.03em;overflow-wrap:anywhere}
+.sub{margin:0 0 28px;max-width:52ch;font-size:16px}
+.bt{display:inline-block;background:var(--acc);color:var(--on);border-radius:999px;padding:5px 14px;font-weight:800;letter-spacing:.04em;font-size:14px}
+.top{margin:clamp(20px,4vw,44px) 0 0;text-align:center;font-size:clamp(20px,3.2vw,36px);letter-spacing:-.01em}.top b{font-weight:900}
+.shelf{display:flex;align-items:flex-end;gap:6px;margin-top:clamp(24px,5vw,56px);padding:34px clamp(18px,4vw,40px) 0;min-height:440px;overflow-x:auto;border-bottom:3px solid var(--fg);scrollbar-width:none}
+.bs{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:space-between;width:var(--w);height:var(--h);padding:14px 0;border:0;border-radius:6px 6px 0 0;background:var(--sb);color:var(--sf);box-shadow:inset 0 0 0 1px rgba(128,128,128,.25);transition:transform .45s var(--e);animation:fin .8s var(--e) backwards;animation-delay:calc(var(--i)*50ms)}
+.bs:first-child{margin-left:auto}.bs:last-child{margin-right:auto}
+.bs:hover,.bs:focus-visible{transform:translateY(-18px)}
+.bs span{writing-mode:vertical-rl;transform:rotate(180deg);font-size:var(--fs);font-weight:900;letter-spacing:.02em;white-space:nowrap}
+.bs em{font-style:normal;font-weight:600;font-size:11px}.bs i{width:14px;height:14px;border:2px solid currentColor;border-radius:50%}
+.v0{--sb:#2E6B4E;--sf:#fff}.v1{--sb:#F26B4D;--sf:#15181E}.v2{--sb:#F5C451;--sf:#15181E}.v3{--sb:#1F4D37;--sf:#fff}.v4{--sb:#DCEBDD;--sf:#15181E}.v5{--sb:#15181E;--sf:#F5F1E8}
+.bs.ad{--h:240px;--w:64px;--sb:transparent;--sf:var(--fg);border:2px dashed var(--line);border-bottom:0;justify-content:center}.bs.ad span{font-size:15px}
+.dlg{width:fit-content;max-width:calc(100% - 36px);margin:28px auto 0;padding:12px 22px;border:1px solid var(--line);border-radius:999px;background:var(--card);text-align:center}
+.cg{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2.6vw,32px);margin-top:28px}
+.cs{display:block;position:relative;container-type:inline-size;aspect-ratio:200/130;padding:0;background:none;border:0;text-align:left;color:var(--cf);transition:transform .45s var(--e),filter .45s;animation:fin .7s var(--e) backwards;animation-delay:calc(var(--i)*45ms)}
+.cs:hover,.cs:focus-visible{transform:translateY(-6px);filter:drop-shadow(0 14px 16px rgba(21,24,30,.25))}
+.cs svg{display:block;width:100%;height:100%}.cs>:not(svg){position:absolute}
+.cs .y,.cs .n{top:8cqw;font-size:3.6cqw;font-weight:600}.cs .y{left:9cqw}.cs .n{right:9cqw}
+.cs .m{left:9cqw;right:9cqw;top:13cqw;font-size:9.4cqw;font-weight:900;line-height:1}
+.cs .xp{left:9cqw;right:9cqw;top:25cqw;height:1.4cqw;border-radius:9px;background:rgba(128,128,128,.35);overflow:hidden}
+.xp u{display:block;height:100%;background:currentColor}
+.cs .nw{left:50%;bottom:4cqw;transform:translateX(-50%);padding:.5cqw 3cqw;border-radius:9cqw;background:#fff;color:#15181E;font-style:normal;font-weight:800;font-size:3.2cqw;white-space:nowrap}
+.cs{--c1:#DCEBDD;--c2:#2E6B4E;--cf:#fff}
+.hud{display:flex;align-items:flex-end;gap:20px;margin-bottom:16px}.xpb{flex:1}
+.xph{display:flex;justify-content:space-between;margin-bottom:8px;font-weight:800;font-size:13px}
+.bar{height:10px;border-radius:9px;background:var(--line);overflow:hidden}.bar u{display:block;height:100%;width:0;border-radius:9px;background:var(--acc);transition:width .8s var(--e)}
+.fc{display:block;padding:20px 24px;background:var(--card);border:1px solid var(--line);border-radius:20px}.fc b{font-weight:600;font-size:14px}
+.fc input{display:block;width:100%;background:none;border:0;border-bottom:2px solid var(--line);padding:12px 0 8px;font-size:clamp(17px,2.2vw,22px);font-weight:600;outline:0;transition:border-color .3s}
+.fc input:focus,.in:focus{border-color:var(--acc)}
+.tip{margin:12px 4px 0;font-size:13px}
+.pl{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:start;margin-top:32px}
+.pn{padding:20px;border:1px solid var(--line);border-radius:28px;animation:pop .6s var(--e) both}
+.sc{position:sticky;top:16px;display:flex;flex-direction:column;max-height:calc(100vh - 32px)}
+.sc .sg{overflow:auto;padding-right:6px;scrollbar-width:thin;scrollbar-color:var(--acc) transparent}
+.sh{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.sh h2{margin:0;font-weight:900;font-size:clamp(24px,3.2vw,32px);letter-spacing:-.02em}.ct{margin-left:auto;font-size:13px;font-weight:600}
+.fg,.sg{display:grid;gap:10px}.fg{grid-template-columns:repeat(3,1fr)}
+.c,.r{background:var(--card);border:1px solid var(--line);border-radius:16px;cursor:pointer;transition:background .25s}
+.c:hover,.r:hover{background:var(--hov)}
+.c{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-height:170px;padding:16px}.c.blank{background:none;border:0;cursor:default}
+.n{font-weight:800;font-size:12px}
+.hk{font-weight:500;font-size:12.5px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden}.hk.e{font-weight:400;opacity:.55}
+.c .t{margin-top:auto}
+.t{display:inline-block;padding:2px 10px;border-radius:999px;color:#15181E;font-weight:700;font-size:11px;white-space:nowrap}
+.t0{background:#DCEBDD}.t1{background:#F5C451}.t2{background:#F26B4D}.t3{background:#2E6B4E;color:#fff}
+.r{display:grid;grid-template-columns:36px 1fr;align-items:center;gap:10px;padding:14px 16px 14px 6px}
+.r b{text-align:center;font-weight:900;font-size:17px}.rb{display:flex;flex-direction:column;align-items:flex-start;gap:8px}.r .hk{-webkit-line-clamp:3;font-size:13px}
+.pop{animation:pop .5s var(--e) both}
+.ld{animation:sh 1.3s ease-in-out infinite}@keyframes sh{50%{opacity:.45}}
+.sw{margin-top:16px;overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.sheet{width:100%;min-width:860px;border-collapse:collapse}
+.sheet th{background:#F5C451;color:#15181E;font-weight:800;font-size:13px;letter-spacing:.04em;padding:12px 10px}
+.sheet td{height:40px;padding:0;border:1px solid var(--line);text-align:center;font-weight:600;font-size:13px}
+.sheet .d0{width:130px;font-weight:700}
+.sheet select,.sheet input{display:block;width:100%;height:40px;padding:0 8px;border:0;border-radius:0;background:transparent;text-align:center;font-weight:700;outline:0;appearance:none}
+.sheet select option{color:#15181E;background:#fff}
+.sheet input:focus,.sheet select:focus{box-shadow:inset 0 0 0 2px var(--acc)}
+.sheet .jn{background:var(--tint)}.sheet .hs{background:#F26B4D;color:#15181E}.sheet .ss{background:#DCEBDD;color:#1F4D37}
+.sheet .lk{text-align:left;font-weight:500}.lk:not(:placeholder-shown){color:var(--lnk);text-decoration:underline}
+.ov{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:16px;background:rgba(21,24,30,.55);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .3s}
+.ov.on{opacity:1;pointer-events:auto}
+.md{width:100%;max-width:820px;max-height:88vh;overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:clamp(20px,3vw,32px);transform:translateY(20px);transition:transform .45s var(--e)}
+.ov.on .md{transform:none}
+.md h3{margin:14px 0 22px;font-weight:800;font-size:clamp(19px,2.8vw,24px);line-height:1.35}.md>.t{margin-right:8px}
+.lb{display:block;margin-bottom:16px;font-weight:600;font-size:13px}.lb .in{margin-top:8px;font-weight:400}
+.in{display:block;width:100%;background:none;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15px;outline:0}
+textarea.in{resize:vertical;line-height:1.5}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
+.dt{width:100%;min-width:480px;border-collapse:collapse}
+.dt th{background:var(--acc);color:var(--on);text-align:left;padding:12px 14px;font-weight:600}
+.dt td{padding:14px;vertical-align:top;line-height:1.55}
+.ma{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px;margin-top:22px}
+.cm{position:fixed;z-index:60;min-width:220px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px;box-shadow:0 12px 30px rgba(21,24,30,.18);opacity:0;transform:scale(.96);transform-origin:top left;pointer-events:none;transition:opacity .2s,transform .25s var(--e)}
+.cm.on{opacity:1;transform:none;pointer-events:auto}
+.cm button{display:block;width:100%;text-align:left;background:none;border:0;border-radius:9px;padding:10px 14px;font-weight:600;font-size:14px}.cm button:hover{background:var(--hov)}
+.ts{position:fixed;z-index:70;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);max-width:calc(100% - 32px);background:var(--fg);color:var(--bg);border-radius:14px;padding:12px 20px;font-weight:600;font-size:14px;opacity:0;pointer-events:none;transition:opacity .3s,transform .4s var(--e)}
+.ts.on{opacity:1;transform:translate(-50%,0)}
+.yt{display:flex;gap:8px;margin:0 0 24px}.btn.on{background:var(--acc);border-color:var(--acc);color:var(--on)}a.btn{text-decoration:none}.bar2{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0}.pl.one{grid-template-columns:1fr;max-width:780px}.mx{width:100%;min-width:520px;border-collapse:collapse;font-size:14px}.mx th,.mx td{border:1px solid var(--fg);padding:10px 12px;line-height:1.5;vertical-align:top}.mx .hh{background:#15181E;color:#F5F1E8;text-align:center;font-size:17px;font-weight:900}.mx .hb{border:0;background:none;padding:0}.mx .ch{text-align:center;font-weight:800;background:var(--card)}.mx td:first-child{width:64px;text-align:center;font-weight:700}.sheet.vt{min-width:980px}.sheet textarea{display:block;width:100%;min-height:56px;padding:8px 10px;border:0;background:transparent;resize:vertical;outline:0;font-weight:500;text-align:left}.sheet textarea:focus{box-shadow:inset 0 0 0 2px var(--acc)}
+@media(max-width:1000px){.pl{grid-template-columns:1fr}.sc{position:static;max-height:none}.cg{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){.cg{grid-template-columns:1fr 1fr}.hud{flex-direction:column;align-items:stretch}.c{min-height:130px;padding:8px}.hk{font-size:10.5px}.t{font-size:9.5px;padding:1px 6px}.n,.ct{font-size:10.5px}.pn{padding:12px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style></head><body>
+<div class="wrap">
+<header class="tb"><button class="lg" data-a="home"><i></i>CONTENT PLAN</button><div class="tr"><button class="btn" data-a="back" id="bk" style="display:none">Kembali</button><button class="tg2" id="tg" aria-label="Ganti mode terang atau gelap"><svg class="su" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg><svg class="mo" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button></div></header>
+<main id="view"></main>
+</div>
+<div class="ov" id="ov"><div class="md" id="md"></div></div>
+<div class="cm" id="cm"></div><div class="ts" id="ts" role="status"></div>
+<svg width="0" height="0" style="position:absolute"><symbol id="spk" viewBox="0 0 24 24"><path d="M12 2l2.2 6.8L21 11l-6.8 2.2L12 20l-2.2-6.8L3 11l6.8-2.2z" fill="currentColor"/></symbol>
+<symbol id="cs" viewBox="0 0 200 130"><rect width="200" height="130" rx="9" style="fill:var(--c1)" stroke="#888" stroke-opacity=".4"/><rect x="14" y="14" width="172" height="82" rx="4" style="fill:var(--c2)"/><rect x="14" y="88" width="172" height="3" fill="#fff"/><rect x="14" y="92" width="172" height="4" fill="#b0b0b0"/><rect x="44" y="56" width="112" height="30" rx="15" fill="#15181E"/><circle cx="70" cy="71" r="11" fill="none" stroke="#fff" stroke-width="3"/><circle cx="70" cy="71" r="3.5" fill="#fff"/><circle cx="130" cy="71" r="11" fill="none" stroke="#fff" stroke-width="3"/><circle cx="130" cy="71" r="3.5" fill="#fff"/><path d="M36 130l10-30h108l10 30z" fill="#15181E" fill-opacity=".45"/><circle cx="62" cy="116" r="3.5" fill="#15181E"/><circle cx="138" cy="116" r="3.5" fill="#15181E"/><rect x="94" y="112" width="12" height="8" rx="2" fill="#15181E"/><g fill="#15181E" fill-opacity=".5"><circle cx="7" cy="7" r="2.6"/><circle cx="193" cy="7" r="2.6"/><circle cx="7" cy="123" r="2.6"/><circle cx="193" cy="123" r="2.6"/></g></symbol></svg>
+<script>
+const BLN=["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+const DEFP="Kamu copywriter konten Instagram untuk bengkel teknisi: custom spare part, custom mesin, bubut mesin, service mesin dan rem, selang PU. Tulis hook tajam dan santai yang bikin orang berhenti scroll: 1 sampai 2 kalimat, ada konflik atau risiko nyata di dunia bengkel, tanpa klise. Gambaran slide dan opsi gambar dibuat singkat dan dramatis.";
+const DEFT=["Selang PU","Custom spare part","Bubut mesin","Custom mesin"];
+const DEFM="saya adalah teknisi bengkel yang mengerjakan custom spare part, custom mesin, service spare part dan mesin, bubut, pembuatan mesin serta service rem hingga kendala pada mesin dan kendaraan, berikan ide gambaran postingan slide dan opsi gambar dari setiap slide nya, buat dalam bentuk tabel dan sederhana, buat lebih ekspresif dan dramatis";
+const JNS=["STORYTELLING","EDUCATION","LIFESTYLE","ASMR","TRENDING","FASHION TIPS","TUTORIAL","SOCIAL PROOF","REVIEW"];
+let N={feeds:16,story:30};const nn=id=>id=='b3'?{feeds:10,story:0}:{feeds:16,story:30},FS=[2,2,3,4,3,2,3,3,2,2,3,4,3,2,3,3],ST=[3,3,3,3,2,3,2,2,4,3,3,3,3,3,2,3,2,2,4,3,2,3,2,2,4,2,3,2,2,4],$=s=>document.querySelector(s),p2=n=>String(n).padStart(2,"0"),up=s=>String(s).toUpperCase();
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const NOW=new Date(),NY=NOW.getFullYear(),NM=NOW.getMonth(),mk=(y,m)=>y+"-"+p2(m+1),root=document.documentElement;
+const RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+let cur,bid,plan,cfg,okFn,ld={feeds:new Set(),story:new Set()},busy={};
+const SEED=[["rj","Rhoda Jaya"],["b2","Panarybody"],["b3","Talk Bring Changes"]];
+let brands=(()=>{try{const v=JSON.parse(localStorage.getItem("rj-brands"));if(Array.isArray(v)){v.forEach(b=>{if(b.id=="b2"&&b.name=="Brand 02")b.name="Panarybody";if(b.id=="b3"&&b.name=="Brand 03")b.name="Talk Bring Changes"});return v.filter(b=>!(/^b[456]$/.test(b.id)&&/^Brand 0[1-9]$/.test(b.name)))}}catch(e){}return SEED.map(([id,name])=>({id,name}))})();
+const sb=()=>{try{localStorage.setItem("rj-brands",JSON.stringify(brands))}catch(e){}};
+const pk=id=>id=="rj"?"rj-plan-":"rj-plan-"+id+"-",ck=id=>"rj-cfg-"+id,isS=id=>id=="b2";
+const load=(id,k)=>{try{const v=JSON.parse(localStorage.getItem(pk(id)+k));if(v&&v.feeds&&v.story)return v}catch(e){}return{focus:"",feeds:Array(16).fill(null),story:Array(30).fill(null),rows:{}}};
+const save=(k=cur,p=plan,id=bid)=>{try{localStorage.setItem(pk(id)+k,JSON.stringify(p))}catch(e){}};
+const loadCfg=id=>{try{const v=JSON.parse(localStorage.getItem(ck(id)));if(v&&v.prompt&&v.topics&&v.topics.length)return v}catch(e){}return{prompt:DEFP,topics:[...DEFT]}};
+const tpo=(C,i)=>C.topics[i%C.topics.length],cnt=a=>a.filter(Boolean).length;
+const YR=[2026,2027],y0=y=>y==2026?8:0,tot=(id,y,i)=>isS(id)?new Date(y,i+1,0).getDate()*5:nn(id).feeds+nn(id).story,unit=id=>isS(id)?'video':'ide',cn=(id,y,i)=>{const p=load(id,mk(y,i)),n=nn(id);return isS(id)?Object.values(p.rows||{}).filter(r=>r.l||r.c).length:cnt(p.feeds.slice(0,n.feeds))+cnt(p.story.slice(0,n.story))},cde=s=>{const m=String(s).toUpperCase().match(/\b[A-Z]{1,4}\d{2,5}\b/g);return m?m[m.length-1]:''};
+function stat(id){let t=0;YR.forEach(y=>{for(let i=y0(y);i<12;i++)t+=cn(id,y,i)});return{t}}
+let tt;function toast(s){const t=$("#ts");t.textContent=s;t.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>t.classList.remove("on"),5000)}
+function go(fn){const v=$("#view");if(RM){fn();scrollTo(0,0);return}v.classList.add("out");
+ setTimeout(()=>{fn();scrollTo(0,0);v.classList.remove("out");v.classList.add("in");setTimeout(()=>v.classList.remove("in"),460)},220)}
+const hd=(t,s)=>`<h1 class="h1">${esc(t)}</h1><p class="sub">${s}</p>`;
+if(!root.dataset.theme)root.dataset.theme=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";
+$("#tg").onclick=()=>{const t=root.dataset.theme=="dark"?"light":"dark";root.dataset.theme=t;try{localStorage.setItem("rj-theme",t)}catch(e){}};
+
+const H=[330,380,300,400,350,320,370],W=[64,80,58,90,70,60,84];
+function home(){bid=cur=plan=null;
+ $("#view").innerHTML=`<p class="top"><b>PILIH BRAND</b></p><div class="shelf">${brands.map((b,i)=>{const h=H[i%7],n=up(b.name),fs=Math.max(13,Math.min(24,Math.floor((h-90)/(n.length*.78))));
+ return`<button class="bs v${i%6}" style="--h:${h}px;--w:${W[(i*3)%7]}px;--fs:${fs}px;--i:${i}" data-a="brand" data-b="${b.id}" data-r="1" data-n="${stat(b.id).t} ${unit(b.id)} terisi"><em>${p2(i+1)}</em><span>${esc(n)}</span><i></i></button>`}).join("")}<button class="bs ad" style="--i:${brands.length}" data-a="add"><span>+ BRAND</span></button></div><p class="dlg" id="dl">Arahkan ke buku lalu klik untuk membuka brand.</p>`}
+const info=e=>{const s=e.target.closest&&e.target.closest(".bs"),d=$("#dl");if(!s||!d)return;d.innerHTML=s.dataset.b?`<b>${esc(s.querySelector("span").textContent)}</b>, ${s.dataset.n}. Klik untuk membuka.`:"Klik untuk menambah brand baru."};
+document.addEventListener("mouseover",info);document.addEventListener("focusin",info);
+
+function brandView(id,y){const b=brands.find(x=>x.id==id);if(!b){location.hash="";return}bid=id;cur=plan=null;y=y||YR[0];
+ $("#view").innerHTML=hd(up(b.name),"Pilih kaset bulan untuk membuka content plan.")+`<div class='yt'>${YR.map(v=>`<button class='btn${v==y?' on':''}' data-a='yr' data-b='${id}' data-y='${v}'>${v}</button>`).join('')}</div><div class="cg">${BLN.map((m,i)=>{if(i<y0(y))return'';const c=cn(id,y,i),t=tot(id,y,i);
+ return`<button class="cs k${i%6}" data-a="month" data-b="${id}" data-m="${mk(y,i)}" style="--i:${i}"><svg viewBox="0 0 200 130"><use href="#cs"/></svg><span class="y">${y}</span><small class="n">${c}/${t}</small><span class="m">${up(m)}</span><span class="xp"><u style="width:${c/t*100}%"></u></span>${y==NY&&i==NM?'<em class="nw">BULAN INI</em>':""}</button>`}).join("")}</div>`}
+
+function sec(k,t){const ix=[...Array(N[k]).keys()];if(k=="feeds")ix.reverse();
+ return`<section class="pn ${k=="feeds"?"ph":"sc"}"><div class="sh"><h2>${t}</h2><button class="gb gen" data-a="gen" data-k="${k}"><svg><use href="#spk"/></svg>Generate</button><span class="ct" id="ct-${k}"></span></div>
+ <div class="${k=="feeds"?"fg":"sg"}">${k=="feeds"?'<div class="c blank"></div>'.repeat((3-N.feeds%3)%3):""}${ix.map(i=>`<div class="${k=="feeds"?"c":"r"}" data-k="${k}" data-i="${i}"></div>`).join("")}</div></section>`}
+function planView(id,k){const b=brands.find(x=>x.id==id);if(!b){location.hash="";return}bid=id;cur=k;N=nn(id);plan=load(id,k);cfg=loadCfg(id);ld={feeds:new Set(),story:new Set()};const[y,m]=k.split("-").map(Number);
+ const badge=`<span class="bt">${esc(up(b.name))}</span>`;
+ if(isS(id)){plan.rows=plan.rows||{};const days=new Date(y,m,0).getDate(),o=(l,v)=>`<option${l==v?" selected":""}>${l}</option>`;let h="";
+  for(let d=1;d<=days;d++)for(let r=0;r<5;r++){const q=d+"-"+r,w=plan.rows[q]||{};
+   h+=`<tr>${r?"":`<td class="d0" rowspan="5">${p2(d)}-${p2(m)}-${y}</td>`}<td class="${w.k=="HARDSELL"?"hs":w.k=="SOFTSELL"?"ss":""}"><select data-q="${q}" data-f="k"><option value="">-</option>${["HARDSELL","SOFTSELL"].map(l=>o(l,w.k)).join("")}</select></td><td><input data-q="${q}" data-f="c" value="${esc(w.c)}" placeholder="-"></td><td class="jn"><select data-q="${q}" data-f="j"><option value="">-</option>${JNS.map(l=>o(l,w.j=="RREVIEW"?"REVIEW":w.j)).join("")}</select></td><td><input class="lk" data-q="${q}" data-f="l" value="${esc(w.l)}" placeholder="https://vt.tiktok.com/..."></td></tr>`}
+  $("#view").innerHTML=hd(up(BLN[m-1])+" "+y,badge)+`<div class='bar2'><button class='btn fill' data-a='dl'>Download spreadsheet (.csv)</button><button class='btn' data-a='cp'>Salin untuk Google Sheets</button><a class='btn' href='https://sheets.new' target='_blank' rel='noopener'>Buka Google Sheets baru</a></div><p class="tip">Tempel banyak link atau nama produk sekaligus (satu per baris) di kolom link atau kode untuk mengisi ke bawah. Kode otomatis diambil dari nama produk, contoh QN2607.</p><div class="sw"><table class="sheet"><tr><th>TANGGAL</th><th>KONTEN</th><th>KODE PRODUK</th><th>JENIS KONTEN</th><th>LINK VIDEO</th></tr>${h}</table></div>${vt(plan)}`;return}
+ $("#view").innerHTML=hd(up(BLN[m-1])+" "+y,badge)+`<div class="hud"><div class="xpb"><div class="xph"><b>PROGRES</b><span id="xt"></span></div><div class="bar"><u id="xf"></u></div></div><button class="btn" data-a="prm">Ubah prompt</button></div>
+ <label class="fc"><b>Ide berhubungan seputar</b><input id="fi" value="${esc(plan.focus)}" placeholder="contoh: musim hujan, promo akhir tahun, alat berat tambang"></label>
+ <p class="tip">Isi kolom di atas lalu klik Generate. Klik kanan (atau tekan lama di HP) pada satu ide untuk generate ulang. Feeds 1 ada di paling bawah, Feeds ${N.feeds} di paling atas.</p><div class="pl${N.story?'':' one'}">${sec("feeds","Feeds IG")}${N.story?sec("story","Story"):''}</div>`;
+ ["feeds","story"].forEach(t=>plan[t].forEach((_,i)=>paint(t,i)))}
+
+function inner(k,i){const it=plan[k][i],l=ld[k].has(i),tg=`<span class="t t${i%4}">${esc(it&&it.tp||tpo(cfg,i))}</span>`;
+ const hk=l?'<span class="hk e">Menulis ide…</span>':it?`<span class="hk">${esc(it.hook)}</span>`:'<span class="hk e">Belum ada ide</span>';
+ return k=="feeds"?`<span class="n">Feeds ${i+1}</span>${hk}${tg}`:`<b>${i+1}</b><div class="rb">${hk}${tg}</div>`}
+function paint(k,i,f){const e=document.querySelector(`[data-k="${k}"][data-i="${i}"]`);if(!e)return;e.innerHTML=inner(k,i);
+ const l=ld[k].has(i);e.classList.toggle("ld",l);e.classList.remove("pop");
+ if(f&&!l){void e.offsetWidth;e.style.animationDelay=(i%8)*40+"ms";e.classList.add("pop")}
+ const c=$("#ct-"+k);if(c)c.textContent=cnt(plan[k])+" / "+N[k]+" ide";
+ const t=cnt(plan.feeds)+cnt(plan.story);const M=N.feeds+N.story;$("#xt").textContent=t>=M?"SELESAI":t+" / "+M;$("#xf").style.width=t/M*100+"%"}
+
+async function ask(k,idx,avoid,P,key,nm,C){
+ const Sm=window.claude&&await window.claude.use("sample");if(!Sm)throw{code:"na"};
+ const spec=idx.map(i=>`${i+1}=${tpo(C,i)}`).join(", ");
+ const p=`${C.prompt}\n\nBrand: ${nm}. Bulan: ${BLN[+key.split("-")[1]-1]}. Seputar: ${P.focus||"bebas"}.\nBuat ${idx.length} ide ${k=="feeds"?"postingan feed carousel":"story"} Instagram. Topik tiap nomor (nomor=topik): ${spec}. Tiap ide murni tentang topiknya dan beda satu sama lain.${avoid?` Jangan mirip dengan: ${avoid}`:""}\nBalas HANYA baris dengan format persis ini, tanpa tabel dan tanpa teks lain, satu ide satu baris:\nnomor||Hook tajam||Gambaran slide (singkat, pakai tanda panah)||Opsi gambar (singkat)`;
+ const r=await Sm(p,{cache:false});
+ return r.text.split("\n").map(l=>l.split("||").map(s=>s.trim())).filter(a=>a.length>=4&&/^\d+$/.test(a[0])&&a[1]).map(a=>({n:+a[0],hook:a[1].replace(/^["“”]+|["“”]+$/g,""),slide:a[2],gambar:a[3]}))}
+function bz(k,on){busy[k]=on;const b=document.querySelector(`.gen[data-k="${k}"]`);if(b){b.disabled=on;b.classList.toggle("sp",on)}}
+async function gen(k,only){
+ const id=bid,key=cur,P=plan,C=cfg,nm=(brands.find(x=>x.id==id)||{}).name,all=only||[...Array(N[k]).keys()],old=only&&P[k][only[0]],live=()=>P===plan,pt=(i,f)=>live()&&paint(k,i,f),sz=k=="feeds"?8:10;
+ all.forEach(i=>{ld[k].add(i);pt(i)});if(!only)bz(k,true);
+ let er=null,got=0;const q=[];for(let j=0;j<all.length;j+=sz)q.push(all.slice(j,j+sz));
+ await Promise.all([0,1].map(async()=>{while(q.length){const c=q.shift();
+  try{(await ask(k,c,old?old.hook:"",P,key,nm,C)).forEach(o=>{const i=o.n-1;if(c.includes(i)){P[k][i]={hook:o.hook,slide:o.slide,gambar:o.gambar,tp:tpo(C,i)};got++}})}catch(e){er=e}
+  c.forEach(i=>{ld[k].delete(i);pt(i,true)});save(key,P,id)}}));
+ if(!only&&live())bz(k,false);
+ if(er&&!got)toast(er.code=="not_granted"?"Izin generate belum diberikan.":er.code=="rate_limited"?"Terlalu banyak permintaan, tunggu sebentar lalu coba lagi.":er.code=="na"?"Fitur generate tidak tersedia di tampilan ini.":"Gagal membuat ide: "+String(er.message||er.code||"coba lagi").slice(0,120));
+ else if(got<all.length)toast(got+" dari "+all.length+" ide berhasil. Klik kanan ide yang kosong untuk generate ulang.")}
+
+function detail(k,i){const it=plan[k][i];if(!it)return;const sl=it.slide||(it.slides||[]).map(x=>x.isi).join(" → "),gm=it.gambar||(it.slides||[]).map(x=>x.gambar).join(" / ");
+ $("#md").innerHTML=`<span class="t t${i%4}">${k=="feeds"?"Feeds":"Story"} ${i+1}</span><span class="t t0">${esc(it.tp||tpo(cfg,i))}</span><h3>${esc(it.hook)}</h3>
+ <div class="tw"><table class="dt"><tr><th>Gambaran slide</th><th>Opsi gambar</th></tr><tr><td>${esc(sl)}</td><td>${esc(gm)}</td></tr></table></div>
+ <div class="ma"><button class="btn" data-a="redo" data-k="${k}" data-i="${i}">Generate ulang</button><button class="btn" data-a="mat" data-k="${k}" data-i="${i}">Buka materi</button><button class="btn fill" data-a="x">Tutup</button></div>`;$("#ov").classList.add("on")}
+const MP=(k,i)=>{const it=plan[k][i],n=(k=='feeds'?FS:ST)[i],b=((cfg&&cfg.mp)||DEFM).trim().replace(/[\s,.]+$/,'');
+ return`${b}, berikan tentang\n\n${it.hook}\n${n} slide. teks sedikit saja setiap slide nya\n\nBalas HANYA ${n} baris, tanpa teks lain, dengan format persis: nomor||Teks di desain||Gambaran visual atau opsi gambar`};
+async function mat(k,i,force){const it=plan[k][i];if(!it)return;const n=(k=='feeds'?FS:ST)[i],P=plan,id=bid,key=cur,at=`data-k='${k}' data-i='${i}'`,on=()=>$('#ov').classList.contains('on'),
+ show=()=>{if(P!==plan||!on())return;const m=it.m||[],R=Array.from({length:n},(_,j)=>m[j]||{t:'',v:''});
+  $('#md').innerHTML=`<p class='tip' style='margin:0 0 14px'>${esc(it.hook)}</p><div class='tw'><table class='mx'><tr><th class='hb'></th><th class='hh' colspan='2'>${k=='feeds'?'FEEDS':'STORY'} ${i+1}</th></tr><tr><th class='ch'>Slide</th><th class='ch'>Judul / Isi Konten</th><th class='ch'>Opsi Gambar / Visual</th></tr>${R.map((r,j)=>`<tr><td>${j+1}</td><td>${esc(r.t)}</td><td>${esc(r.v)}</td></tr>`).join('')}</table></div><div class='ma'><button class='btn' data-a='mpc' ${at}>Salin prompt</button><button class='btn' data-a='mre' ${at}>${it.m?'Generate ulang materi':'Generate materi'}</button><button class='btn fill' data-a='x'>Tutup</button></div>`};
+ $('#ov').classList.add('on');
+ if(!force){show();return}
+ $('#md').innerHTML=`<h3>Menulis materi ${k=='feeds'?'Feeds':'Story'} ${i+1}…</h3><p class='tip'>${n} slide, tunggu sebentar.</p>`;
+ try{const Sm=window.claude&&await window.claude.use('sample');if(!Sm)throw{code:'na'};
+  const r=await Sm(MP(k,i),{cache:false}),rows=r.text.split('\n').map(l=>{l=l.trim();return l.indexOf('||')>-1?l.split('||').map(s=>s.trim()):l[0]=='|'?l.split('|').slice(1,-1).map(s=>s.trim()):[]}).filter(a=>a.length>=3&&/^\d+$/.test(a[0])).map(a=>({t:a[1],v:a.slice(2).join(' ')}));
+  if(!rows.length)throw{code:'empty',message:'Jawaban kosong'};it.m=rows;save(key,P,id);show()
+ }catch(e){const ms=e.code=='na'?'Fitur generate tidak tersedia di tampilan ini. Pakai tombol Salin prompt.':e.code=='not_granted'?'Izin generate belum diberikan.':e.code=='rate_limited'?'Terlalu banyak permintaan, tunggu sebentar lalu coba lagi.':String(e.message||e.code||'coba lagi').slice(0,140);
+  if(P===plan&&on())$('#md').innerHTML=`<h3>Materi gagal dibuat</h3><p class='tip'>${esc(ms)}</p><div class='ma'><button class='btn' data-a='mpc' ${at}>Salin prompt</button><button class='btn' data-a='mre' ${at}>Coba lagi</button><button class='btn fill' data-a='x'>Tutup</button></div>`}}
+function form(t,v,lb,fn){okFn=fn;$("#md").innerHTML=`<h3>${t}</h3>${v===null?"":`<input class="in" id="fv" value="${esc(v)}" maxlength="30" autocomplete="off">`}<div class="ma"><button class="btn" data-a="x">Batal</button><button class="btn fill" data-a="ok">${lb}</button></div>`;$("#ov").classList.add("on");setTimeout(()=>{const f=$("#fv");f&&f.focus()},350)}
+function menu(x,y,h){const m=$("#cm");m.innerHTML=h;m.style.left=Math.max(8,Math.min(x,innerWidth-236))+"px";m.style.top=Math.max(8,Math.min(y,innerHeight-150))+"px";m.classList.add("on")}
+function ctx(c,x,y){const bt=(a,t,at)=>`<button data-a="${a}" ${at}>${t}</button>`;
+ if(c.dataset.r){const at=`data-b="${c.dataset.b}"`;return menu(x,y,bt("ren","Ubah nama",at)+bt("del","Hapus brand",at))}
+ const k=c.dataset.k,i=+c.dataset.i,has=plan[k][i],at=`data-k="${k}" data-i="${i}"`;
+ menu(x,y,bt("redo","Generate ide ini",at)+(has?bt("mat","Buka materi",at)+bt("d","Lihat detail",at)+bt("clr","Kosongkan",at):""))}
+
+const A={
+ brand(d){location.hash="brand-"+d.b},month(d){location.hash="plan-"+d.b+"-"+d.m},home(){location.hash=""},
+ back(){location.hash=cur?"brand-"+bid+"-"+cur.slice(0,4):""},
+ add(){form("Tambah brand","","Simpan",v=>{brands.push({id:"n"+Date.now().toString(36),name:v});sb();route(true)})},
+ ren(d){const b=brands.find(x=>x.id==d.b);form("Ubah nama brand",b.name,"Simpan",v=>{b.name=v;sb();route(true)})},
+ del(d){const b=brands.find(x=>x.id==d.b);form(`Hapus “${esc(up(b.name))}”? Semua isi di brand ini ikut terhapus.`,null,"Hapus",()=>{try{localStorage.removeItem(ck(b.id));Object.keys(localStorage).filter(k=>k.startsWith(pk(b.id))&&(b.id!="rj"||/^rj-plan-\d/.test(k))).forEach(k=>localStorage.removeItem(k))}catch(e){}brands=brands.filter(x=>x!=b);sb();route(true)})},
+ ok(){const i=$("#fv"),v=i?i.value.trim():"";if(i&&!v)return;const f=okFn;A.x();f(v)},
+ prm(){$("#md").innerHTML=`<h3>Ubah prompt content plan</h3><label class="lb">Prompt ide<textarea class="in" id="pp" rows="7">${esc(cfg.prompt)}</textarea></label><label class="lb">Topik (pisahkan dengan koma, dirotasi berurutan agar tidak ada topik sama yang berdekatan)<input class="in" id="pt" value="${esc(cfg.topics.join(", "))}"></label><label class="lb">Prompt materi slide (dipakai saat Buka materi)<textarea class="in" id="pm" rows="5">${esc(cfg.mp||DEFM)}</textarea></label><p class="tip">Brand, bulan, isi “ide berhubungan seputar”, jumlah ide, dan format hasil (nomor, hook tajam, gambaran slide, opsi gambar) ditambahkan otomatis. Untuk prompt materi, kalimat berikan tentang, teks ide, jumlah slide, dan format tabel ditambahkan otomatis. Prompt ini hanya berlaku untuk brand ini.</p>
+ <div class="ma"><button class="btn" data-a="rst">Kembalikan default</button><button class="btn" data-a="x">Batal</button><button class="btn fill" data-a="psv">Simpan</button></div>`;$("#ov").classList.add("on")},
+ rst(){$("#pp").value=DEFP;$("#pt").value=DEFT.join(", ");$("#pm").value=DEFM},
+ psv(){const t=$("#pt").value.split(",").map(s=>s.trim()).filter(Boolean);cfg={prompt:$("#pp").value.trim()||DEFP,topics:t.length?t:[...DEFT],mp:$("#pm").value.trim()||DEFM};try{localStorage.setItem(ck(bid),JSON.stringify(cfg))}catch(e){}A.x();["feeds","story"].forEach(k=>plan[k].forEach((_,i)=>paint(k,i)));toast("Prompt disimpan. Klik Generate untuk memakainya.")},
+ yr(d){location.hash='brand-'+d.b+'-'+d.y},mat(d){mat(d.k,+d.i)},mre(d){mat(d.k,+d.i,1)},async mpc(d){const t=MP(d.k,+d.i);try{await navigator.clipboard.writeText(t)}catch(e){const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(x){}a.remove()}toast('Prompt disalin.')},
+ vadd(){plan.vids=plan.vids||[];for(let i=0;i<10;i++)plan.vids.push({});save();route(true)},
+ async dl(){try{const D=window.claude&&await window.claude.use('downloads');if(!D)throw{code:'na'};await D.save({filename:'panarybody-'+cur+'.csv',data:String.fromCharCode(65279)+tbl(',')})}catch(e){toast(e.code=='declined'?'Download dibatalkan.':'Download tidak tersedia di tampilan ini. Pakai tombol Salin untuk Google Sheets.')}},
+ async cp(){const s=tbl(String.fromCharCode(9));try{await navigator.clipboard.writeText(s)}catch(e){const a=document.createElement('textarea');a.value=s;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(x){}a.remove()}toast('Tabel disalin. Buka sheets.new lalu tempel (Ctrl+V atau Cmd+V).')},
+ gen(d){if(!busy[d.k])gen(d.k)},d(d){detail(d.k,+d.i)},
+ redo(d){$("#ov").classList.remove("on");gen(d.k,[+d.i])},
+ clr(d){plan[d.k][+d.i]=null;save();paint(d.k,+d.i)},x(){$("#ov").classList.remove("on")}};
+function sv(t){plan.rows=plan.rows||{};const q=t.dataset.q,r=plan.rows[q]=plan.rows[q]||{};r[t.dataset.f]=t.value;if(t.dataset.f=="k")t.parentNode.className=t.value=="HARDSELL"?"hs":t.value=="SOFTSELL"?"ss":"";save()}
+function ext(t){const m=t.value.toUpperCase().match(/\b[A-Z]{1,4}\d{2,5}\b/g);if(m)t.value=m[m.length-1]}
+function sv2(t){const r=plan.vids[+t.dataset.v],f=t.dataset.f;r[f]=t.value;if(f=='n'){const c=cde(t.value),e=t.closest('tr').querySelector('[data-f=c]');if(c&&e){e.value=c;r.c=c}}save()}
+const vt=p=>{const v=p.vids=p.vids||[];while(v.length<10)v.push({});
+ return`<div class='sh' style='margin-top:40px'><h2>LINK VIDEO</h2></div><p class='tip'>Tempel link video di kolom link (boleh banyak sekaligus, satu per baris). Nama produk di keranjang kuning dan deskripsinya diisi dengan menyalin dari TikTok, karena TikTok tidak bisa dibaca otomatis. Kode produk terisi sendiri dari nama produk.</p><div class='sw'><table class='sheet vt'><tr><th>NO</th><th>LINK VIDEO</th><th>NAMA PRODUK (KERANJANG KUNING)</th><th>KODE</th><th>DESKRIPSI</th></tr>${v.map((x,j)=>`<tr><td>${j+1}</td><td><input class='lk' data-v='${j}' data-f='l' value="${esc(x.l)}" placeholder='https://vt.tiktok.com/...'></td><td><textarea data-v='${j}' data-f='n' rows='2'>${esc(x.n)}</textarea></td><td><input data-v='${j}' data-f='c' value="${esc(x.c)}" placeholder='-'></td><td><textarea data-v='${j}' data-f='d' rows='2'>${esc(x.d)}</textarea></td></tr>`).join('')}</table></div><div class='bar2'><button class='btn' data-a='vadd'>Tambah 10 baris</button></div>`};
+function tbl(sep){const y=+cur.slice(0,4),m=+cur.slice(5),days=new Date(y,m,0).getDate(),R=[['TANGGAL','KONTEN','KODE PRODUK','JENIS KONTEN','LINK VIDEO']];
+ for(let d=1;d<=days;d++)for(let r=0;r<5;r++){const w=plan.rows[d+'-'+r]||{};R.push([p2(d)+'-'+p2(m)+'-'+y,w.k||'',w.c||'',w.j=='RREVIEW'?'REVIEW':w.j||'',w.l||''])}
+ return R.map(a=>a.map(c=>sep==','?'"'+String(c).split('"').join('""')+'"':String(c).split(sep).join(' ')).join(sep)).join(String.fromCharCode(10))}
+let sup=false,lp;
+document.addEventListener("click",e=>{if(sup){sup=false;return}$("#cm").classList.remove("on");
+ if(e.target.id=="ov")return A.x();
+ const a=e.target.closest("[data-a]");if(a)return A[a.dataset.a](a.dataset);
+ const c=e.target.closest("[data-i]");if(c&&plan)detail(c.dataset.k,+c.dataset.i)});
+document.addEventListener("contextmenu",e=>{const c=e.target.closest("[data-r],[data-i]");if(!c||(!plan&&!c.dataset.r))return;e.preventDefault();ctx(c,e.clientX,e.clientY)});
+addEventListener("touchstart",e=>{sup=false;const c=e.target.closest("[data-r],[data-i]");if(!c||(!plan&&!c.dataset.r))return;const t=e.touches[0];lp=setTimeout(()=>{sup=true;ctx(c,t.clientX,t.clientY)},550)},{passive:true});
+["touchend","touchmove","touchcancel"].forEach(n=>addEventListener(n,()=>clearTimeout(lp),{passive:true}));
+document.addEventListener("input",e=>{const t=e.target;if(t.id=="fi"&&plan){plan.focus=t.value;save()}else if(t.dataset&&t.dataset.q&&plan)sv(t);else if(t.dataset&&t.dataset.v!==undefined&&plan)sv2(t)});
+document.addEventListener("change",e=>{const t=e.target;if(t.dataset&&t.dataset.f=="c"&&t.dataset.q&&plan){ext(t);sv(t)}});
+document.addEventListener("paste",e=>{const t=e.target;if(!t.dataset||(!t.dataset.q&&t.dataset.v===undefined)||!/^(INPUT|TEXTAREA)$/.test(t.tagName)||!plan)return;
+ const ls=(e.clipboardData.getData("text")||"").split(/\r?\n/).map(s=>s.trim()).filter(Boolean);if(ls.length<2)return;e.preventDefault();
+ const all=[...t.closest('table').querySelectorAll(`[data-f="${t.dataset.f}"]`)],s=all.indexOf(t);
+ ls.forEach((v,j)=>{const x=all[s+j];if(x){x.value=v;if(x.dataset.q){if(x.dataset.f=="c")ext(x);sv(x)}else sv2(x)}})});
+addEventListener("keydown",e=>{if(e.key=="Escape"){A.x();$("#cm").classList.remove("on")}else if(e.key=="Enter"&&e.target.id=="fv")A.ok()});
+addEventListener("scroll",()=>$("#cm").classList.remove("on"),{passive:true});
+function route(first){const h=location.hash.slice(1),p=/^plan-([a-z0-9]+)-(\d{4}-\d{2})$/.exec(h),b=/^brand-([a-z0-9]+?)(?:-(\d{4}))?$/.exec(h),
+ f=()=>{p?planView(p[1],p[2]):b?brandView(b[1],+b[2]):home();$("#bk").style.display=h?"":"none"};if(first){f();$("#view").classList.add("in")}else go(f)}
+addEventListener("hashchange",()=>route());route(true);
+</script></body></html>
